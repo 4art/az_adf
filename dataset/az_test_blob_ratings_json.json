@@ -1,0 +1,30 @@
+{
+	"name": "az_test_blob_ratings_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BlobStorage_LinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "ratings.json",
+				"container": "raw-data"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"product_id": {
+					"type": "string"
+				},
+				"rating": {
+					"type": "number"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

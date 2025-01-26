@@ -1,0 +1,41 @@
+{
+	"name": "az_test_blob_sales_data_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BlobStorage_LinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "sales_data.csv",
+				"container": "raw-data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "product_id",
+				"type": "String"
+			},
+			{
+				"name": "sales_amount",
+				"type": "String"
+			},
+			{
+				"name": "region",
+				"type": "String"
+			},
+			{
+				"name": "date",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

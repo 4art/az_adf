@@ -1,0 +1,34 @@
+{
+	"name": "az_test_blob_hist_data_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BlobStorage_LinkedService",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "historical_data.parquet",
+				"container": "raw-data"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "product_id",
+				"type": "INT64"
+			},
+			{
+				"name": "category",
+				"type": "UTF8"
+			},
+			{
+				"name": "price",
+				"type": "INT64"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
