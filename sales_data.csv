@@ -1,0 +1,4 @@
+product_id,sales_amount,region,date
+101,200,Europe,2025-01-01
+102,150,Asia,2025-01-02
+103,300,America,2025-01-03
