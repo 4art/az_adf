@@ -1,5 +1,5 @@
 {
-	"name": "az_test_blob_sales_data_json",
+	"name": "az_test_blob_sales_data_csv",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "BlobStorage_LinkedService",
